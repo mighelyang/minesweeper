@@ -15,10 +15,21 @@ public class Cell : MonoBehaviour
     public Image image;
     public Text text;
 
+    public int cellIdX;
+    public int cellIdY;
+    public int numberOfNeighborBombs;
+
 	// Use this for initialization
 	void Start () {
         cellType = CellType.NORMAL;
+        numberOfNeighborBombs = 0;
 	}
+
+    public void Initialize(int cellIdX, int cellIdY)
+    {
+        this.cellIdX = cellIdX;
+        this.cellIdY = cellIdY;
+    }
 	
 	// Update is called once per frame
 	void Update () {
